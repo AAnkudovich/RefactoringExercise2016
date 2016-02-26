@@ -53,9 +53,7 @@ public class Menu extends JFrame{
 			f = new JFrame("User Type");
 			f.setSize(400, 300);
 			f.setLocation(200, 200);
-			f.addWindowListener(new WindowAdapter() {
-				public void windowClosing(WindowEvent we) { System.exit(0); }
-			});
+			extractedWindowClose();
 
 			JPanel userTypePanel = new JPanel();
 			final ButtonGroup userType = new ButtonGroup();
@@ -331,6 +329,8 @@ public class Menu extends JFrame{
 				}
 			});f.setVisible(true);	
 	}
+
+	
 	
 
 	
@@ -341,13 +341,11 @@ public class Menu extends JFrame{
 		f = new JFrame("Administrator Menu");
 		f.setSize(400, 400);
 		f.setLocation(200, 200);
-		f.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent we) { System.exit(0); }
-		});          
+		extractedWindowClose();         
 		f.setVisible(true);
 		
 		JPanel deleteCustomerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		JButton deleteCustomer = new JButton("Delete Customer");	
+		JButton deleteCustomer = new JButton("Delete Customer");
 		deleteCustomer.setPreferredSize(new Dimension(250, 20));
 		deleteCustomerPanel.add(deleteCustomer);
 		
@@ -456,9 +454,7 @@ public class Menu extends JFrame{
 			    	f = new JFrame("Administrator Menu");
 					f.setSize(400, 300);
 					f.setLocation(200, 200);
-					f.addWindowListener(new WindowAdapter() {
-						public void windowClosing(WindowEvent we) { System.exit(0); }
-					});          
+					extractedWindowClose();          
 					f.setVisible(true);
 				
 				
@@ -601,9 +597,7 @@ public class Menu extends JFrame{
 			    	f = new JFrame("Administrator Menu");
 					f.setSize(400, 300);
 					f.setLocation(200, 200);
-					f.addWindowListener(new WindowAdapter() {
-						public void windowClosing(WindowEvent we) { System.exit(0); }
-					});          
+					extractedWindowClose();          
 					f.setVisible(true);
 				
 				
@@ -758,9 +752,7 @@ public class Menu extends JFrame{
 				f = new JFrame("Administrator Menu");
 				f.setSize(400, 300);
 				f.setLocation(200, 200);
-				f.addWindowListener(new WindowAdapter() {
-					public void windowClosing(WindowEvent we) { System.exit(0); }
-				});       
+				extractedWindowClose();       
 				
 				firstNameLabel = new JLabel("First Name:", SwingConstants.LEFT);
 				surnameLabel = new JLabel("Surname:", SwingConstants.LEFT);
@@ -851,9 +843,7 @@ public class Menu extends JFrame{
 				f = new JFrame("Summary of Transactions");
 				f.setSize(400, 700);
 				f.setLocation(200, 200);
-				f.addWindowListener(new WindowAdapter() {
-					public void windowClosing(WindowEvent we) { System.exit(0); }
-				});          
+				extractedWindowClose();          
 				f.setVisible(true);
 				
 				JLabel label1 = new JLabel("Summary of all transactions: ");
@@ -1283,9 +1273,7 @@ public class Menu extends JFrame{
 		e1 = e;
 		f.setSize(400, 300);
 		f.setLocation(200, 200);
-		f.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent we) { System.exit(0); }
-		});          
+		extractedWindowClose();          
 		f.setVisible(true);
 		
 		if(e.getAccounts().size() == 0)
@@ -1350,9 +1338,7 @@ public class Menu extends JFrame{
 		f = new JFrame("Customer Menu");
 		f.setSize(400, 300);
 		f.setLocation(200, 200);
-		f.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent we) { System.exit(0); }
-		});          
+		extractedWindowClose();          
 		f.setVisible(true);
 		
 		JPanel statementPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -1391,9 +1377,7 @@ public class Menu extends JFrame{
 				f = new JFrame("Customer Menu");
 				f.setSize(400, 600);
 				f.setLocation(200, 200);
-				f.addWindowListener(new WindowAdapter() {
-					public void windowClosing(WindowEvent we) { System.exit(0); }
-				});          
+				extractedWindowClose();          
 				f.setVisible(true);
 				
 				JLabel label1 = new JLabel("Summary of account transactions: ");
@@ -1630,6 +1614,11 @@ public class Menu extends JFrame{
 	     });		}		
 	     });
 	}
+	}
+	public void extractedWindowClose() {
+		f.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent we) { System.exit(0); }
+		});
 	}
 	
 	public static boolean isNumeric(String str)  // a method that tests if a string is numeric
