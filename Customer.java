@@ -12,16 +12,7 @@ public class Customer {
 	ArrayList<CustomerAccount> accounts = new ArrayList<CustomerAccount> ();
 
 	//Blank constructor
-	public Customer()
-	{
-		this.PPS = "";
-		this.surname = "";
-		this.firstName = "";
-		this.DOB = "";
-		this.customerID = "";
-		this.password = "";
-		this.accounts = null;
-	}
+	public Customer(){}
 	
 	//Constructor with details
 	public Customer(String PPS, String surname, String firstName, String DOB, String customerID, String password, ArrayList<CustomerAccount> accounts)
@@ -31,7 +22,7 @@ public class Customer {
 		this.firstName = firstName;
 		this.DOB = DOB;
 		this.customerID = customerID;
-		this.password = password;;
+		this.password = password;
 		this.accounts = accounts;
 	}
 	

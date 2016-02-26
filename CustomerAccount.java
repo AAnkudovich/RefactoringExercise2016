@@ -9,12 +9,7 @@ public class CustomerAccount  {
 	ArrayList<AccountTransaction> transactionList = new ArrayList<AccountTransaction>();
 
 	//Blank Constructor
-	public CustomerAccount()
-	{
-		this.number = "";
-		this.balance = 0;
-		this.transactionList = null;
-	}
+	public CustomerAccount(){}
 	
 	//Constructor with Details
 	public CustomerAccount(String number, double balance, ArrayList<AccountTransaction> transactionList)

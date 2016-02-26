@@ -5,13 +5,7 @@ public class AccountTransaction {
 	double amount;
 	
 	//Blank constructor
-	public AccountTransaction()
-	{
-		this.date = "";
-		this.type = "";	
-		this.amount = 0;
-		
-	}
+	public AccountTransaction(){}
 	
 	//Constructor with details
 	public AccountTransaction(String date, String type, double amount)
