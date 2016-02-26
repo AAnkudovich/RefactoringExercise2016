@@ -218,7 +218,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -357,7 +357,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -501,7 +501,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -866,7 +866,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -955,7 +955,7 @@ public class Menu extends JFrame{
 						    
 						    if(found == false)
 						    {
-						    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+						    	int reply  =  noticeYesNo("User not found. Try again?");
 						    	if (reply == JOptionPane.YES_OPTION) {
 						    		loop = true;
 						    	}
@@ -1007,7 +1007,7 @@ public class Menu extends JFrame{
 						    
 						    if(found == false)
 						    {
-						    	int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+						    	int reply  = noticeYesNo("User not found. Try again?");
 						    	if (reply == JOptionPane.YES_OPTION) {
 						    		loop = true;
 						    	}
@@ -1039,7 +1039,7 @@ public class Menu extends JFrame{
 	public void customer(Customer e1)
 	{	
 		f = new JFrame("Customer Menu");
-		e1 = e;
+		e = e1;
 		f.setSize(400, 300);
 		f.setLocation(200, 200);
 		extractedWindowClose();          
@@ -1432,8 +1432,7 @@ public class Menu extends JFrame{
 			panel2 = new JPanel();
 			add = new JButton("Add");
 			
-			 add.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
+			 
 			
 					
 		PPS = pPSTextField.getText();
@@ -1481,8 +1480,7 @@ public class Menu extends JFrame{
 					
 			}
 		});	
-				}
-			});						
+							
 			JButton cancel = new JButton("Cancel");					
 			cancel.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -1509,7 +1507,7 @@ public class Menu extends JFrame{
 
 		if(!adminUsername.equals("admin"))//search admin list for admin with matching admin username
 		{
-			int reply  = JOptionPane.showConfirmDialog(null, null, "Incorrect Username. Try again?", JOptionPane.YES_NO_OPTION);
+			int reply  = noticeYesNo("Incorrect Username. Try again?");
 			if (reply == JOptionPane.YES_OPTION) {
 				loop = true;
 			}
@@ -1533,7 +1531,7 @@ public class Menu extends JFrame{
 			
 			   if(!adminPassword.equals("admin11"))//search admin list for admin with matching admin password
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "Incorrect Password. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("Incorrect Password. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		
 			    	}
@@ -1578,7 +1576,7 @@ public class Menu extends JFrame{
 		
 		if(found == false)
 		{
-			int reply  = JOptionPane.showConfirmDialog(null, null, "User not found. Try again?", JOptionPane.YES_NO_OPTION);
+			int reply  = noticeYesNo(" User not found. Try again?");
 			if (reply == JOptionPane.YES_OPTION) {
 				loop = true;
 			}
@@ -1603,7 +1601,7 @@ public class Menu extends JFrame{
 			
 			   if(!customer.getPassword().equals(customerPassword))//check if custoemr password is correct
 			    {
-			    	int reply  = JOptionPane.showConfirmDialog(null, null, "Incorrect password. Try again?", JOptionPane.YES_NO_OPTION);
+			    	int reply  = noticeYesNo("Incorrect password. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		
 			    	}
@@ -1626,6 +1624,10 @@ public class Menu extends JFrame{
 			loop = false;
 			customer(customer);				    
 		}
+	}
+
+	public int noticeYesNo(String showThis) {
+		return JOptionPane.showConfirmDialog(null, null, showThis, JOptionPane.YES_NO_OPTION);
 	}
 
 	public static boolean isNumeric(String str)  // a method that tests if a string is numeric
