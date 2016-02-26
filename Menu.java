@@ -92,9 +92,7 @@ public class Menu extends JFrame{
 						f1 = new JFrame("Create New Customer");
 						f1.setSize(400, 300);
 						f1.setLocation(200, 200);
-						f1.addWindowListener(new WindowAdapter() {
-							public void windowClosing(WindowEvent we) { System.exit(0); }
-						});
+						extractedWindowClose();
 							Container content = f1.getContentPane();
 							content.setLayout(new BorderLayout());
 							
