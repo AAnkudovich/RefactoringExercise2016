@@ -4,12 +4,7 @@ public class CustomerCurrentAccount extends CustomerAccount
 {
 	ATMCard atm;
 	
-public CustomerCurrentAccount()
-{
-	super();
-	this.atm = null;
-	
-}
+public CustomerCurrentAccount(){}
 
 public CustomerCurrentAccount(ATMCard atm, String number, double balance, ArrayList<AccountTransaction> transactionList)
 {
