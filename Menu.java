@@ -165,8 +165,9 @@ public class Menu extends JFrame{
 										customerList.add(customer);
 									
 										JOptionPane.showMessageDialog(f, "CustomerID = " + CustomerID +"\n Password = " + password  ,"Customer created.",  JOptionPane.INFORMATION_MESSAGE);
+										f.dispose();
 										menuStart();
-									f.dispose();
+									
 							}
 						});	
 								}
