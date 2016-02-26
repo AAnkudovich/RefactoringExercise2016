@@ -1,4 +1,4 @@
-package redmondn;
+
 
 import java.awt.*;
 
@@ -10,7 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.swing.text.MaskFormatter;
-import java.util.ArrayList; */
+import java.util.ArrayList; 
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
