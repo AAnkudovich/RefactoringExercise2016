@@ -22,6 +22,7 @@ public class Menu extends JFrame{
     private int position = 0;
 	private String password;
 	private Customer customer = null;
+	noticesSeparatedOut n = new noticesSeparatedOut();
 	private CustomerAccount acc = new CustomerAccount();
 	JFrame f, f1;
 	 JLabel firstNameLabel, surnameLabel, pPPSLabel, dOBLabel;
@@ -218,7 +219,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = noticeYesNo("User not found. Try again?");
+			    	int reply  = n.noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -357,7 +358,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = noticeYesNo("User not found. Try again?");
+			    	int reply  = n.noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -501,7 +502,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = noticeYesNo("User not found. Try again?");
+			    	int reply  = n.noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -866,7 +867,7 @@ public class Menu extends JFrame{
 			    
 			    if(found == false)
 			    {
-			    	int reply  = noticeYesNo("User not found. Try again?");
+			    	int reply  = n.noticeYesNo("User not found. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		loop = true;
 			    	}
@@ -955,7 +956,7 @@ public class Menu extends JFrame{
 						    
 						    if(found == false)
 						    {
-						    	int reply  =  noticeYesNo("User not found. Try again?");
+						    	int reply  =  n.noticeYesNo("User not found. Try again?");
 						    	if (reply == JOptionPane.YES_OPTION) {
 						    		loop = true;
 						    	}
@@ -1007,7 +1008,7 @@ public class Menu extends JFrame{
 						    
 						    if(found == false)
 						    {
-						    	int reply  = noticeYesNo("User not found. Try again?");
+						    	int reply  = n.noticeYesNo("User not found. Try again?");
 						    	if (reply == JOptionPane.YES_OPTION) {
 						    		loop = true;
 						    	}
@@ -1507,7 +1508,7 @@ public class Menu extends JFrame{
 
 		if(!adminUsername.equals("admin"))//search admin list for admin with matching admin username
 		{
-			int reply  = noticeYesNo("Incorrect Username. Try again?");
+			int reply  = n.noticeYesNo("Incorrect Username. Try again?");
 			if (reply == JOptionPane.YES_OPTION) {
 				loop = true;
 			}
@@ -1531,7 +1532,7 @@ public class Menu extends JFrame{
 			
 			   if(!adminPassword.equals("admin11"))//search admin list for admin with matching admin password
 			    {
-			    	int reply  = noticeYesNo("Incorrect Password. Try again?");
+			    	int reply  = n.noticeYesNo("Incorrect Password. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		
 			    	}
@@ -1580,7 +1581,7 @@ public class Menu extends JFrame{
 		
 		if(found == false)
 		{
-			int reply  = noticeYesNo(" User not found. Try again?");
+			int reply  = n.noticeYesNo(" User not found. Try again?");
 			if (reply == JOptionPane.YES_OPTION) {
 				loop = true;
 			}
@@ -1605,7 +1606,7 @@ public class Menu extends JFrame{
 			
 			   if(!customer.getPassword().equals(customerPassword))//check if custoemr password is correct
 			    {
-			    	int reply  = noticeYesNo("Incorrect password. Try again?");
+			    	int reply  = n.noticeYesNo("Incorrect password. Try again?");
 			    	if (reply == JOptionPane.YES_OPTION) {
 			    		
 			    	}
@@ -1628,10 +1629,6 @@ public class Menu extends JFrame{
 			loop = false;
 			customer(customer);				    
 		}
-	}
-
-	public int noticeYesNo(String showThis) {
-		return JOptionPane.showConfirmDialog(null, null, showThis, JOptionPane.YES_NO_OPTION);
 	}
 
 	public static boolean isNumeric(String str)  // a method that tests if a string is numeric
