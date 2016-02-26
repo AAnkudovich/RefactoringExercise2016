@@ -1432,8 +1432,7 @@ public class Menu extends JFrame{
 			panel2 = new JPanel();
 			add = new JButton("Add");
 			
-			 add.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
+			 
 			
 					
 		PPS = pPSTextField.getText();
@@ -1481,8 +1480,7 @@ public class Menu extends JFrame{
 					
 			}
 		});	
-				}
-			});						
+							
 			JButton cancel = new JButton("Cancel");					
 			cancel.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
