@@ -204,7 +204,7 @@ public class Menu extends JFrame{
 				{
 			    while(loop)
 			    {
-			    Object customerID = JOptionPane.showInputDialog(f, "Customer ID of Customer You Wish to Apply Charges to:");
+			    Object customerID = extractedInputDialog("Customer ID of Customer You Wish to Apply Charges to:");
 			    
 			    for (Customer aCustomer: customerList){
 			    	
@@ -343,7 +343,7 @@ public class Menu extends JFrame{
 				{
 			    while(loop)
 			    {
-			    Object customerID = JOptionPane.showInputDialog(f, "Customer ID of Customer You Wish to Apply Interest to:");
+			    Object customerID = extractedInputDialog("Customer ID of Customer You Wish to Apply Interest to:");
 			    
 			    for (Customer aCustomer: customerList){
 			    	
@@ -430,7 +430,7 @@ public class Menu extends JFrame{
 						 	
 						 	while(loop)
 						 	{
-							String interestString = JOptionPane.showInputDialog(f, "Enter interest percentage you wish to apply: \n NOTE: Please enter a numerical value. (with no percentage sign) \n E.g: If you wish to apply 8% interest, enter '8'");//the isNumeric method tests to see if the string entered was numeric. 
+							String interestString = extractedInputDialog("Enter interest percentage you wish to apply: \n NOTE: Please enter a numerical value. (with no percentage sign) \n E.g: If you wish to apply 8% interest, enter '8'");//the isNumeric method tests to see if the string entered was numeric. 
 							if(isNumeric(interestString))
 							{
 								
@@ -488,7 +488,7 @@ public class Menu extends JFrame{
 				
 			    while(loop)
 			    {
-			    Object customerID = JOptionPane.showInputDialog(f, "Enter Customer ID:");
+			    Object customerID = extractedInputDialog("Enter Customer ID:");
 			    
 			    for (Customer aCustomer: customerList){
 			    	
@@ -853,7 +853,7 @@ public class Menu extends JFrame{
 			
 			    while(loop)
 			    {
-			    Object customerID = JOptionPane.showInputDialog(f, "Customer ID of Customer You Wish to Add an Account to:");
+			    Object customerID = extractedInputDialog("Customer ID of Customer You Wish to Add an Account to:");
 			    
 			    for (Customer aCustomer: customerList){
 			    	
@@ -941,7 +941,7 @@ public class Menu extends JFrame{
 				else
 				{
 					 {
-						    Object customerID = JOptionPane.showInputDialog(f, "Customer ID of Customer You Wish to Delete:");
+						    Object customerID = extractedInputDialog("Customer ID of Customer You Wish to Delete:");
 						    
 						    for (Customer aCustomer: customerList){
 						    	
@@ -993,7 +993,7 @@ public class Menu extends JFrame{
 				
 				
 					 {
-						    Object customerID = JOptionPane.showInputDialog(f, "Customer ID of Customer from which you wish to delete an account");
+						    Object customerID = extractedInputDialog("Customer ID of Customer from which you wish to delete an account");
 						    
 						    for (Customer aCustomer: customerList){
 						    	
@@ -1215,7 +1215,7 @@ public class Menu extends JFrame{
 						on = false;
 					}
 					
-					String Pin = JOptionPane.showInputDialog(f, "Enter 4 digit PIN;");
+					String Pin = extractedInputDialog("Enter 4 digit PIN;");
 					int i = Integer.parseInt(Pin);
 					
 				   if(on)
@@ -1238,7 +1238,7 @@ public class Menu extends JFrame{
 				
 			}		if(on == true)
 					{
-				String balanceTest = JOptionPane.showInputDialog(f, "Enter amount you wish to lodge:");//the isNumeric method tests to see if the string entered was numeric. 
+				String balanceTest = extractedInputDialog("Enter amount you wish to lodge:");//the isNumeric method tests to see if the string entered was numeric. 
 				if(isNumeric(balanceTest))
 				{
 					
@@ -1297,7 +1297,7 @@ public class Menu extends JFrame{
 							on = false;
 						}
 						
-						String Pin = JOptionPane.showInputDialog(f, "Enter 4 digit PIN;");
+						String Pin = extractedInputDialog("Enter 4 digit PIN;");
 						int i = Integer.parseInt(Pin);
 						
 					   if(on)
@@ -1325,7 +1325,7 @@ public class Menu extends JFrame{
 					
 				}		if(on == true)
 						{
-					String balanceTest = JOptionPane.showInputDialog(f, "Enter amount you wish to withdraw (max 500):");//the isNumeric method tests to see if the string entered was numeric. 
+					String balanceTest = extractedInputDialog("Enter amount you wish to withdraw (max 500):");//the isNumeric method tests to see if the string entered was numeric. 
 					if(isNumeric(balanceTest))
 					{
 						
@@ -1454,7 +1454,7 @@ public class Menu extends JFrame{
 				
 				boolean loop = true;
 				while(loop){
-				 password = JOptionPane.showInputDialog(f, "Enter 7 character Password;");
+				 password = extractedInputDialog("Enter 7 character Password;");
 				
 				 if(password.length() != 7)//Making sure password is 7 characters
 				    {
@@ -1503,7 +1503,7 @@ public class Menu extends JFrame{
 		boolean cont = false;
 		while(loop)
 		{
-		Object adminUsername = JOptionPane.showInputDialog(f, "Enter Administrator Username:");
+		Object adminUsername = extractedInputDialog("Enter Administrator Username:");
 
 		if(!adminUsername.equals("admin"))//search admin list for admin with matching admin username
 		{
@@ -1527,7 +1527,7 @@ public class Menu extends JFrame{
 		
 		while(loop2)
 		{
-			Object adminPassword = JOptionPane.showInputDialog(f, "Enter Administrator Password;");
+			Object adminPassword = extractedInputDialog("Enter Administrator Password;");
 			
 			   if(!adminPassword.equals("admin11"))//search admin list for admin with matching admin password
 			    {
@@ -1556,6 +1556,10 @@ public class Menu extends JFrame{
 		}
 	}
 
+	public String extractedInputDialog(String showThis) {
+		return JOptionPane.showInputDialog(f, showThis);
+	}
+
 	public void existingCustomerMethod() {
 		boolean loop = true, loop2 = true;
 		boolean cont = false;
@@ -1563,7 +1567,7 @@ public class Menu extends JFrame{
 		Customer customer = null;
 		while(loop)
 		{
-		Object customerID = JOptionPane.showInputDialog(f, "Enter Customer ID:");
+		Object customerID =extractedInputDialog("Enter Customer ID:");
 		
 		for (Customer aCustomer: customerList){
 			
@@ -1597,7 +1601,7 @@ public class Menu extends JFrame{
 		
 		while(loop2)
 		{
-			Object customerPassword = JOptionPane.showInputDialog(f, "Enter Customer Password;");
+			Object customerPassword = extractedInputDialog("Enter Customer Password;");
 			
 			   if(!customer.getPassword().equals(customerPassword))//check if custoemr password is correct
 			    {
