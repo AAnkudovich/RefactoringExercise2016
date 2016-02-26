@@ -3,10 +3,7 @@ public class ATMCard {
 	int pin;
 	boolean valid;
 
-	public ATMCard()
-	{
-		this.pin = 0000;
-	}
+	public ATMCard(){}
 	
 	public ATMCard(int pin, boolean valid)
 	{
